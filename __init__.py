@@ -196,7 +196,7 @@ def delete_user(id):
     db.close()
     return redirect(url_for('retrieve_users'))
 
-# ----------------------------------------------------------------------------------------
+# ------------------------------MYBRANCH----------------------------------------------------------
 
 @app.route('/createCustomer', methods=['GET', 'POST'])
 def create_customer():
