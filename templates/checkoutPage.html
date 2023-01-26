@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Check Out{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+
+<h1 class="display-4">Check Out</h1>
+
+<section class="main-container" style="display: flex; justify-content: center">
+
+
+    <div class="left-side" style="margin-right: 300px; ">
+
+        <div class="grid-container" style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <div class="grid-item" style="margin-right:20px;">
+                <img src="{{url_for('static', filename='image1.jpg')}}"
+                     class="u-expanded-width u-image u-image-default u-image-2" width="300" height="150"
+                     style=" padding: 5px; border: 1px solid lightgrey; border-radius: 3px;"/>
+            </div>
+
+
+            <div class="grid-item">
+                <div class="card-1" style="border: 1px solid lightgrey; border-radius: 3px; width: 300px;">
+                    {% for product in products_list %}
+                    <h4> {{ product.get_product_name() }}
+                        <span class="price" style="color:black">
+                            <i class="fa fa-shopping-cart"></i>
+                        </span>
+                    </h4>
+
+                    <p> {{ product.get_description() }} </p>
+                    <p> Price: ${{ product.get_price() }} </p>
+                    <p>Quantity Bought: </p>
+                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+
+        <div class="grid-container" style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <div class="grid-item" style="margin-right:20px;">
+                <img src="{{url_for('static', filename='image1.jpg')}}"
+                     class="u-expanded-width u-image u-image-default u-image-2" width="300" height="150"
+                     style=" padding: 5px; border: 1px solid lightgrey; border-radius: 3px;"/>
+            </div>
+
+
+            <div class="grid-item">
+                <div class="card-1" style="border: 1px solid lightgrey; border-radius: 3px; width: 300px;">
+                    <h4> Product Name
+                        <span class="price" style="color:black">
+                            <i class="fa fa-shopping-cart"></i>
+                        </span>
+                    </h4>
+                    <p> Product Details </p>
+                    <p>S$xxx
+                    <p>Quantity Bought: </p>
+                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-container" style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <div class="grid-item" style="margin-right:20px;">
+                <img src="{{url_for('static', filename='image1.jpg')}}"
+                     class="u-expanded-width u-image u-image-default u-image-2" width="300" height="150"
+                     style=" padding: 5px; border: 1px solid lightgrey; border-radius: 3px;"/>
+            </div>
+
+
+            <div class="grid-item">
+                <div class="card-1" style="border: 1px solid lightgrey; border-radius: 3px; width: 300px;">
+                    <h4> Product Name
+                        <span class="price" style="color:black">
+                            <i class="fa fa-shopping-cart"></i>
+                        </span>
+                    </h4>
+                    <p> Product Details </p>
+                    <p>S$xxx
+                    <p>Quantity Bought: </p>
+                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="right-side" style="margin-left: 300px;">
+        <div class="grid-container" style=" display: flex; justify-content: center">
+            <div class="grid-item" style="width: 500px; height: 500px;">
+                <div class="card-1" style="border: 1px solid lightgrey; border-radius: 3px;">
+                    <h4>User Name
+                        <span class="price" style="color:black">
+                            <i class="fa fa-shopping-cart"></i>
+                        </span>
+                    </h4>
+                    <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                    <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                    <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
+
+
